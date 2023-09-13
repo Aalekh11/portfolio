@@ -1,0 +1,14 @@
+.content_wrapper{
+    @apply bg-black flex items-center justify-around text-white font-bold text-3xl w-screen h-screen
+}
+
+
+.image_wrapper {
+  @apply hidden md:flex items-center justify-end w-[36%] h-screen;
+}
+
+@media screen and (min-width: 1600px) {
+  .image_wrapper {
+    @apply w-[40%];
+  }
+}

@@ -1,0 +1,29 @@
+.content_wrapper {
+  @apply  flex flex-col items-center text-center justify-center w-screen h-screen bg-white mt-[75px];
+}
+
+.purple_animator {
+  @apply absolute top-[15rem] left-[1rem] md:left-[30rem] w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+}
+
+.yellow_animator {
+  @apply absolute right-[30] md:right-[32rem] w-72 h-72 bg-yellow-200 md:bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+  @layer animation-delay-2000;
+}
+
+.pink_animator {
+  @apply absolute bottom-7 md:bottom-[8rem] w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+  @layer animation-delay-2000;
+}
+
+.intro_content{
+    @apply md:flex text-xl items-start md:items-center md:w-[50%] mt-5 font-medium text-gray-600;
+}
+
+.icon_wrapper{
+    @apply flex flex-row items-center justify-around md:justify-between gap-5 mt-6;
+}
+
+.button_wrapper{
+@apply flex w-32 p-3 items-center justify-center bg-black text-center text-white rounded-2xl gap-1;
+}

@@ -1,0 +1,23 @@
+.button_wrapper {
+  @apply w-[100px] relative overflow-hidden transition ease-in-out bg-gradient-to-r pb-[2px];
+}
+
+.button_wrapper:hover{
+
+    @apply -translate-y-1 text-xl
+}
+
+.button_wrapper::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: antiquewhite;
+  transform: scaleX(0) scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.button_wrapper:hover:after{
+  transform: scaleX(1) scaleY(1);
+}
