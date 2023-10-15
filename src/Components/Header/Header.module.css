@@ -1,5 +1,5 @@
 .button_wrapper {
-  @apply w-[100px] relative overflow-hidden transition ease-in-out bg-gradient-to-r pb-[2px];
+  @apply w-[100px] relative overflow-hidden transition cursor-pointer ease-in-out pb-[2px];
 }
 
 .button_wrapper:hover{

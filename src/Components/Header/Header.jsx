@@ -1,36 +1,35 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import styles from "Components/Header/Header.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 function Header() {
   const [nav, setNav] = useState(false);
-  //   useEffect(() => {
-  //     window.addEventListener('scroll', isSticky);
-  //     return () => {
-  //         window.removeEventListener('scroll', isSticky);
-  //     };
-  // });
 
-  // const isSticky = (e) => {
-  //   const header = document.querySelector('.header-section');
-  //   const scrollTop = window.scrollY;
-  //   scrollTop >= 250 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
-  // };
+  const links = useMemo(() => {
+    return [
+      { id: 1, link: "home" },
+      { id: 2, link: "about" },
+      { id: 3, link: "experience" },
+      { id: 4, link: "works" },
+      { id: 5, link: "contact" },
+    ];
+  }, []);
 
   return (
     <div className="fixed z-10 flex justify-between items-center w-full h-[75px] text-white bg-black">
       <div className="ml-2 w-[25%] text-center">@alekh.karhadkar</div>
 
       <div className="w-[75%] hidden md:flex flex-col md:flex-row gap-5 text-white text-center items-center justify-end md:mr-10">
-        <div className={styles.button_wrapper}>Home</div>
+        <div className={styles.button_wrapper}><Link to="home" smooth delay={300}>Home</Link></div>
 
-        <div className={styles.button_wrapper}>Skills</div>
+        <div className={styles.button_wrapper}><Link to="about" smooth delay={300}>About me</Link></div>
 
-        <div className={`${styles.button_wrapper} w-10`}>Experience</div>
+        <div className={`${styles.button_wrapper} w-10`}><Link to="experience" smooth delay={300}>Experience</Link></div>
 
-        <div className={styles.button_wrapper}>Works</div>
+        <div className={styles.button_wrapper}><Link to="works" smooth delay={300}>Works</Link></div>
 
-        <div className={styles.button_wrapper}>Hire me</div>
+        <div className={styles.button_wrapper}><Link to="contact" smooth delay={300}>Contact</Link></div>
       </div>
 
       <div
@@ -41,19 +40,18 @@ function Header() {
       </div>
       {nav && (
         <ul className="flex flex-col justify-center md:hidden  items-center absolute md:relative lg:relative top-0 left-0 w-full h-screen bg-black text-white">
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">Home</li>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
-            Skills
-          </li>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
-            Experience
-          </li>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
-            Works
-          </li>
-          <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
-            Hire me
-          </li>
+          {links.map(({ id, link }) => {
+            return (
+              <div
+                key={id}
+                className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              >
+                <Link onClick={()=>setNav(false)} to={link} smooth delay={300}>
+                  {link}
+                </Link>
+              </div>
+            );
+          })}
         </ul>
       )}
     </div>

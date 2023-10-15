@@ -1,0 +1,5 @@
+.container {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.33), rgba(0, 0, 0, 0.33)),
+    url(assets/bg.png);
+    @apply flex flex-col items-center justify-center md:h-screen md:w-screen p-3
+}

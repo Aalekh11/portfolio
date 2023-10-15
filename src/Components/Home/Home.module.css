@@ -3,16 +3,16 @@
 }
 
 .purple_animator {
-  @apply absolute top-[15rem] left-[1rem] md:left-[30rem] w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+  @apply absolute top-[15rem] left-[1rem] md:left-[30rem] w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
 }
 
 .yellow_animator {
-  @apply absolute right-[30] md:right-[32rem] w-72 h-72 bg-yellow-200 md:bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+  @apply absolute right-[30] md:right-[32rem] w-72 h-72 bg-yellow-200 md:bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
   @layer animation-delay-2000;
 }
 
 .pink_animator {
-  @apply absolute bottom-7 md:bottom-[8rem] w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
+  @apply absolute bottom-7 md:bottom-[8rem] w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob;
   @layer animation-delay-2000;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .icon_wrapper{
-    @apply flex flex-row items-center justify-around md:justify-between gap-5 mt-6;
+    @apply relative flex flex-row items-center justify-around md:justify-between gap-5 mt-6;
 }
 
 .button_wrapper{

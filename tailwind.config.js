@@ -35,6 +35,9 @@ module.exports = {
         },
       },
     },
+    backgroundImage:{
+      circularLight:'repeating-radial-gradient(rgba(0,0,0,0.4) 6px,#000000 98px, #fff 100px);'
+    }
   },
   variants: {
     extend: {},
